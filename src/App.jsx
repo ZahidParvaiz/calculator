@@ -10,13 +10,46 @@ function App() {
         setScreen("");
         setOp("+");
     };
-    const calculate = ()=> {
-        const res= parseFloat(prev) + parseFloat(screen);
-        setScreen(res);
 
+    const sub = () => {
+        setPrev(screen);
+        setScreen("");
+        setOp("-");
     };
-    
 
+    const mul = () => {
+        setPrev(screen);
+        setScreen("");
+        setOp("*");
+    };
+
+    const div = () => {
+        setPrev(screen);
+        setScreen("");
+        setOp("/");
+    };
+
+    const calculate = () => {
+        let res = 0;
+        const p = parseFloat(prev);
+        const s = parseFloat(screen);
+        switch (op) {
+            case "+":
+                res = p + s;
+                break;
+            case "-":
+                res = p - s;
+                break;
+            case "*":
+                res = p * s;
+                break;
+            case "/":
+                res = p / s;
+                break;
+        }
+
+        setScreen(res);
+    };
 
     return (
         <div className="App">
@@ -26,12 +59,12 @@ function App() {
             <button className="num" onClick={() => setScreen(p => p + 7)}>7</button>
             <button className="num" onClick={() => setScreen(p => p + 8)}>8</button>
             <button className="num" onClick={() => setScreen(p => p + 9)}>9</button>
-            <button className="num">X</button>
+            <button className="num" onClick={mul}>X</button>
             <br />
             <button className="num" onClick={() => setScreen(p => p + 4)}>4</button>
             <button className="num" onClick={() => setScreen(p => p + 5)}>5</button>
             <button className="num" onClick={() => setScreen(p => p + 6)}>6</button>
-            <button className="num">-</button>
+            <button className="num" onClick={sub}>-</button>
             <br />
             <button className="num" onClick={() => setScreen(p => p + 1)}>1</button>
             <button className="num" onClick={() => setScreen(p => p + 2)}>2</button>
@@ -40,7 +73,7 @@ function App() {
             <br />
             <button className="num" onClick={() => setScreen(p => p + 0)}>0</button>
             <button className="num" onClick={() => setScreen(p => p + ".")}>.</button>
-            <button className="num">/</button>
+            <button className="num" onClick={div}>/</button>
             <button className="num" onClick={calculate}>=</button>
             <br />
 
