@@ -50,6 +50,15 @@
   color: white;
 }
 
+.op {
+  border: 1px solid #999;
+  font-family: monospace;
+  margin: 2px;
+  font-size: 18px;
+  background-color: #345;
+  color: white;
+}
+
 .screen {
   border: 1px dashed #555;
   font-family:  monospace;
@@ -60,4 +69,9 @@
   background-color: #333;
   color: white;
   height: 40px;
+}
+
+.clear {
+  border: 2px solid #666;
+  text-align: right;
 }
