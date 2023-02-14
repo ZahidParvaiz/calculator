@@ -54,6 +54,7 @@ function App() {
     return (
         <div className="App">
             <h2>Calculator</h2>
+            <h4>Zahid Parvaiz</h4>
             <div className="screen">{screen}</div>
             <br />
             <button className="num" onClick={() => setScreen(p => p + 7)}>7</button>
