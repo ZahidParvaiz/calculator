@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+
+.num {
+  border: 1px solid #999;
+  font-family: monospace;
+  margin: 2px;
+  font-size: 18px;
+  background-color: #222;
+  color: white;
+}
+
+.screen {
+  border: 1px dashed #555;
+  font-family:  monospace;
+  font-size: 24px;
+  text-align: right;
+  padding-right: 5px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+}
